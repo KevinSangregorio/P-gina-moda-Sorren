@@ -1,0 +1,47 @@
+/* HEADER */
+header {
+  margin: 3vh 10vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  h1 {
+    a {
+      font-family: "Euphoria Script", sans-serif;
+      font-size: 3rem;
+      color: $main-colour;
+    }
+  }
+  nav {
+    ul {
+      display: flex;
+      gap: 1vw;
+      li {
+        a {
+          font-weight: 500;
+          font-size: 1rem;
+          color: $almost-black;
+          position: relative;
+          transition: all 0.5s;
+          &::before {
+            background: $main-colour;
+            bottom: -5px;
+            content: "";
+            height: 3px;
+            position: absolute;
+            transition: width 0.5s;
+            width: 0;
+          }
+          &:hover {
+            &::before {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+  div.items-header {
+    display: flex;
+    gap: 1vw;
+  }
+}
