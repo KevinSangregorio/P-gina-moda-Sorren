@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sorren</title>
+    <script src="./js/main.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
@@ -20,16 +22,12 @@
         </ul>
       </nav>
       <div class="items-header">
-        <a href="#"
-          ><img
-            src="./assets/light-mode.png"
-            alt="Modo nocturno/día"
-            style="width: 14px; height: 14px"
-        /></a>
-        <a href=""><img src="./assets/user.png" alt="Logo de usuario" /></a>
-        <a href=""
-          ><img src="./assets/shopping-bag.png" alt="Bolsa de compras"
-        /></a>
+        <button class="switch" id="switch">
+          <span><i class="fas fa-sun"></i></span>
+          <span><i class="fas fa-moon"></i></span>
+        </button>
+        <a href="#"><i class="fas fa-user"></i></a>
+        <a href="#"><i class="fas fa-shopping-cart"></i></a>
       </div>
     </header>
 
@@ -82,8 +80,8 @@
         <div class="featured-products__categories">
           <ul>
             <li><a href="#">Más comprados</a></li>
-            <li><a href="#">Más comprados</a></li>
-            <li><a href="#">Más comprados</a></li>
+            <li><a href="#">Últimos modelos</a></li>
+            <li><a href="#">Liquidación</a></li>
           </ul>
         </div>
         <div class="container-featured-products">
@@ -129,26 +127,49 @@
     </main>
 
     <footer>
-      <div>
-        <p>Información de la tienda</p>
-        <ul>
-          <li>
-            <a href="#"
-              ><img
-                src="./assets/location-pin.png"
-                alt="Pin de ubicación"
-                style="width: 18px; height: 18px"
-            /></a>
-          </li>
-          <li>
-            <a href="#"><img src="./assets/tel.png" alt="Teléfono" /></a>
-          </li>
-          <li>
-            <a href="#"><img src="./assets/email.png" alt="Email" /></a>
-          </li>
-        </ul>
+      <div class="footer-up">
+        <div class="footer-up__info-contact">
+          <p>Información de la tienda</p>
+          <ul>
+            <li>
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Dirección</span> 
+            </li>
+            <li>
+              <i class="fas fa-phone-alt"></i>
+              <span>Teléfono</span> 
+            </li>
+            <li>
+              <i class="fas fa-envelope"></i>
+              <span>Correo</span> 
+            </li>
+          </ul>
+        </div>
+        <div class="footer-up__form">
+          <div class="trust-us">
+            <p>Gracias por confiar en nosotrxs</p>
+          </div>
+          <div class="form-container">
+            <form name="form-contact">
+              <h3>Formulario.</h3>
+              <input type="text" placeholder="Nombre" />
+
+              <input type="email" placeholder="Correo" />
+
+              <textarea placeholder="Mensaje"></textarea>
+
+              <div>
+                <input type="reset" value="Reset">
+                <input type="submit">
+              </div>
+              
+            </form>
+          </div>
+        </div>
       </div>
-      <div></div>
+      <div class="footer-down">
+        <p>Todos los derechos reservados a Kevin Sangregorio</p><span>&copy;</span>
+      </div>
     </footer>
   </body>
 </html>

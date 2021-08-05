@@ -1,6 +1,6 @@
-
--Que lo del header se vea mas grande(letras e icono)
--Botones del formulario cuadrados
 -Agregar Skeleton o animacion mientras carga
 -Crear página de login
--Tipografia del logo: Euphoria Script 
+
+Arreglar:
+	- "Gracias por confiar en nosotrxs" --> el padding sobre sale cuando se baja la resolucion de pantalla
+	- Boton de compra de "remeras lindas"

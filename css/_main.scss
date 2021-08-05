@@ -2,6 +2,7 @@
 main {
   section.wn-s1 {
     background-image: url(../assets/background-light-blue.png);
+    justify-content: flex-end;
   }
   section.wn-season {
     background-repeat: no-repeat;
@@ -9,8 +10,6 @@ main {
     height: 600px;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
-
     div {
       margin-right: 8vw;
       display: flex;
@@ -42,8 +41,9 @@ main {
     }
     button.btn-buy {
       padding: 8px 2vw;
-      background-color: #a9f2fe;
+      background-color: transparent;
       transition: all 0.5s;
+      border: 1px solid black;
       &:hover {
         background-color: black;
         color: #fff;
@@ -87,14 +87,13 @@ main {
           border: solid 1px black;
           padding: 3px;
           border-radius: 5px;
-          transition: all 1.2s;
+          transition: all .5s;
           width: 100%;
           text-align: center;
           &:hover {
             color: #fff;
             background-color: $main-colour;
-            transform: rotateY(360deg);
-            border: none;
+            border: 1px solid $main-colour;
           }
         }
       }
@@ -108,6 +107,9 @@ main {
       font-size: 2rem;
       text-decoration: underline;
       color: $almost-black;
+      body.dark & {
+        color: #fff;
+      }
     }
     div.featured-products__categories {
       display: flex;
@@ -124,61 +126,71 @@ main {
           a {
             padding: 15px 25px;
             color: $almost-black;
-            transition: all .6s;
+            transition: all 0.6s;
+            body.dark & {
+              color: #fff;
+            }
             &:hover {
-                background-color: #FFEB28;
-           }
+              background-color: #ffeb28;
+            }
           }
         }
         li:last-child {
-            border: none;
+          border: none;
         }
       }
     }
     div.container-featured-products {
-        padding-top: 50px;
+      padding-top: 50px;
+      display: flex;
+      margin: 0 8vw;
+      justify-content: space-between;
+      div.featured-item {
+        width: 270px;
+        height: 270px;
+        background-image: url(../assets/remera-producto-destacado.png);
+        background-position: 0 15px;
+        background-size: cover;
+        border: 1px solid rgba(34, 34, 34, 0.12);
+        border-radius: 5px;
         display: flex;
-        margin: 0 8vw;
-        justify-content: space-between;
-        div.featured-item {
-            width: 270px;
-            height: 270px;
-            background-image: url(../assets/remera-producto-destacado.png);
-            background-position: 0 15px;
-            background-size: cover;
-            border: 1px solid rgba(34, 34, 34, 0.12);
-            border-radius: 5px;
-            display: flex;
-            flex-direction: column;
-            box-shadow: 10px 10px 11px -10px rgba(0,0,0,0.75);
-            transition: all .5s;
-            &:hover{
-                box-shadow: 27px 26px 52px -16px rgba(0,0,0,0.24);
-                transform: scale(1.1);
-            }
-            div {
-                position: relative;
-                p {
-                    font-weight: 500;
-                    font-size: .5rem;
-                    position: absolute;
-                    top: 12px;
-                    right: 12px;
-                    color: #fff;
-                    background-color: #C92C2C;
-                    border-radius: 5px;
-                    padding: 3px;
-                }
-            }
-            p {
-               background-color: #FFEB28;
-               font-weight: 600;
-               padding-top: 2px;
-            }
-            p.item-price {
-                color: $main-colour;
-            }
+        flex-direction: column;
+        box-shadow: 10px 10px 11px -10px rgba(0, 0, 0, 0.75);
+        transition: all 0.5s;
+        &:hover {
+          box-shadow: 27px 26px 52px -16px rgba(0, 0, 0, 0.24);
+          transform: scale(1.1);
         }
+        div {
+          position: relative;
+          p {
+            font-weight: 500;
+            font-size: 0.5rem;
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            color: #fff;
+            background-color: #c92c2c;
+            border-radius: 5px;
+            padding: 3px;
+          }
+        }
+        p {
+          background-color: #ffeb28;
+          font-weight: 600;
+          padding-top: 2px;
+        }
+        p.item-price {
+          color: $main-colour;
+        }
+      }
+    }
+  }
+  section.wn-s2 {
+    background-image: url(../assets/background-pink.png);
+    margin: 60px 0;
+    div {
+      margin-left: 8vw;
     }
   }
 }
