@@ -1,9 +1,9 @@
 /* FOOTER */
 footer {
   div.footer-up {
-    padding: 0 140px;
+    padding: 0 80px;
     background-color: #f3f3f3;
-    height: 350px;
+    height: min-content;
     display: flex;
     justify-content: space-between;
     body.dark & {
@@ -37,13 +37,13 @@ footer {
       align-items: center;
       align-self: center;
       height: 310px;
-      width: 50%;
+      width: 55%;
+      margin: 15px;
       div.trust-us {
         background-color: #fe8ebd;
         padding: 0 2%;
         width: 110%;
         height: 315px;
-
         font-weight: 700;
         font-size: 1.25rem;
         display: flex;
@@ -67,6 +67,9 @@ footer {
         background-color: #fcfcfc;
         padding: 17px 35px;
         width: 80%;
+        body.dark & {
+          background-color: #424242;
+        }
         form {
           display: flex;
           flex-direction: column;

@@ -25,6 +25,10 @@ a {
   text-decoration: none;
 }
 
+button:hover, input[type=submit]:hover, input[type=reset]:hover {
+  cursor: pointer;
+}
+
 /* HEADER */
 header {
   margin: 3vh 10vw;
@@ -45,14 +49,14 @@ header h1 a {
   color: #E51A73;
 }
 
-header nav ul {
+header nav#home-menu ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 1vw;
 }
 
-header nav ul li a {
+header nav#home-menu ul li a {
   font-weight: 500;
   font-size: 1rem;
   color: #222222;
@@ -61,11 +65,11 @@ header nav ul li a {
   transition: all 0.5s;
 }
 
-body.dark header nav ul li a {
+body.dark header nav#home-menu ul li a {
   color: #fff;
 }
 
-header nav ul li a::before {
+header nav#home-menu ul li a::before {
   background: #E51A73;
   bottom: -5px;
   content: "";
@@ -76,7 +80,7 @@ header nav ul li a::before {
   width: 0;
 }
 
-header nav ul li a:hover::before {
+header nav#home-menu ul li a:hover::before {
   width: 100%;
 }
 
@@ -99,6 +103,23 @@ body.dark header div.items-header a i {
   color: #fff;
 }
 
+header div.items-header div.container-btn-menu input#btn-menu {
+  display: none;
+}
+
+header div.items-header div.container-btn-menu label {
+  display: none;
+  font-size: 1.25rem;
+}
+
+body.dark header div.items-header div.container-btn-menu label {
+  color: #fff;
+}
+
+header div.items-header div.container-btn-menu label:hover {
+  cursor: pointer;
+}
+
 header div.items-header button.switch {
   background-color: #343d5b;
   border-radius: 1000px;
@@ -109,7 +130,7 @@ header div.items-header button.switch {
   display: -ms-flexbox;
   display: flex;
   outline: none;
-  margin-right: 5vw;
+  margin-right: 15%;
 }
 
 header div.items-header button.switch::after {
@@ -229,7 +250,9 @@ main section.tendencias {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 40px 100px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0 100px;
 }
 
 main section.tendencias div.trend1 {
@@ -241,9 +264,11 @@ main section.tendencias div.trend2 {
 }
 
 main section.tendencias div.trending {
+  margin-top: 40px;
   background-repeat: no-repeat;
   background-size: cover;
   width: 20vw;
+  min-width: 250px;
   height: 200px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -306,6 +331,7 @@ main section.featured-products {
 }
 
 main section.featured-products h3 {
+  margin-top: 40px;
   text-align: center;
   font-weight: 500;
   font-size: 2rem;
@@ -325,10 +351,11 @@ main section.featured-products div.featured-products__categories {
       -ms-flex-pack: center;
           justify-content: center;
   margin-top: 40px;
+  width: 100%;
 }
 
 main section.featured-products div.featured-products__categories ul {
-  width: 50vw;
+  width: 100vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -363,10 +390,11 @@ main section.featured-products div.featured-products__categories ul li:last-chil
 }
 
 main section.featured-products div.container-featured-products {
-  padding-top: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin: 0 8vw;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -374,6 +402,7 @@ main section.featured-products div.container-featured-products {
 }
 
 main section.featured-products div.container-featured-products div.featured-item {
+  margin-top: 40px;
   width: 270px;
   height: 270px;
   background-image: url(../assets/remera-producto-destacado.png);
@@ -438,9 +467,11 @@ main section.wn-s2 div {
 
 /* FOOTER */
 footer div.footer-up {
-  padding: 0 140px;
+  padding: 0 80px;
   background-color: #f3f3f3;
-  height: 350px;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -502,7 +533,8 @@ footer div.footer-up div.footer-up__form {
       -ms-grid-row-align: center;
       align-self: center;
   height: 310px;
-  width: 50%;
+  width: 55%;
+  margin: 15px;
 }
 
 footer div.footer-up div.footer-up__form div.trust-us {
@@ -543,6 +575,10 @@ footer div.footer-up div.footer-up__form div.form-container {
   background-color: #fcfcfc;
   padding: 17px 35px;
   width: 80%;
+}
+
+body.dark footer div.footer-up div.footer-up__form div.form-container {
+  background-color: #424242;
 }
 
 footer div.footer-up div.footer-up__form div.form-container form {
@@ -658,5 +694,134 @@ footer div.footer-down span {
 
 body.dark footer div.footer-down span {
   color: #fff;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 900px) {
+  header div.items-header a i, header div.items-header div label i {
+    font-size: 2rem;
+    margin-right: 10px;
+  }
+  header div.items-header div.container-btn-menu input#btn-menu:checked ~ nav#home-menu {
+    margin: 0;
+  }
+  header div.items-header div.container-btn-menu label {
+    display: block;
+  }
+  header nav#home-menu {
+    position: absolute;
+    background: #fff;
+    top: 112px;
+    right: 0px;
+  }
+  header nav#home-menu ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    vertical-align: center;
+  }
+  main section.wn-s1 {
+    background-image: url(../assets/mobile-background-light-blue.png);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  main section.wn-s1 div {
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin: 0;
+  }
+  main section.wn-s1 div p, main section.wn-s1 div h2, main section.wn-s1 div button {
+    color: #fff;
+  }
+  main section.tendencias {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  main section.tendencias div.trending {
+    margin: 40px 20px 0;
+    width: 100vw;
+  }
+  main section.tendencias div.trending div {
+    font-size: 180%;
+  }
+  main section.featured-products div.featured-products__categories ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 30px;
+  }
+  main section.featured-products div.featured-products__categories ul li a {
+    font-size: 1.5rem;
+  }
+  main section.featured-products div.container-featured-products {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  main section.featured-products div.container-featured-products div.featured-item {
+    margin: 40px 20px;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+  }
+  main section.featured-products div.container-featured-products div.featured-item:hover {
+    -webkit-transform: none;
+            transform: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  main section.wn-s2 {
+    display: none;
+  }
+  footer div.footer-up {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0 20px;
+  }
+  footer div.footer-up div.footer-up__info-contact {
+    vertical-align: center;
+  }
+  footer div.footer-up div.footer-up__info-contact p {
+    text-align: left;
+    font-size: 2rem;
+    margin-top: 40px;
+    width: 80%;
+  }
+  footer div.footer-up div.footer-up__info-contact ul {
+    font-size: 1.5rem;
+  }
+  footer div.footer-up div.footer-up__info-contact ul li {
+    text-align: center;
+  }
+  footer div.footer-up div.footer-up__form {
+    width: 100%;
+    margin-top: 40px;
+  }
+  footer div.footer-up div.footer-up__form div.trust-us {
+    display: none;
+  }
+  footer div.footer-up div.footer-up__form div.form-container {
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

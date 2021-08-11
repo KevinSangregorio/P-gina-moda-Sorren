@@ -6,13 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sorren</title>
     <script src="./js/main.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
     <header>
       <h1 class="logo"><a href="#">Sorren</a></h1>
-      <nav>
+      <nav id="home-menu">
         <ul>
           <li><a href="#">Ofertas</a></li>
           <li><a href="#">Accesorios</a></li>
@@ -28,6 +31,10 @@
         </button>
         <a href="#"><i class="fas fa-user"></i></a>
         <a href="#"><i class="fas fa-shopping-cart"></i></a>
+        <div class="container-btn-menu">
+          <input type="checkbox" id="btn-menu" />
+          <label for="btn-menu"><i class="fas fa-bars" onc></i></label>
+        </div>
       </div>
     </header>
 
@@ -133,15 +140,15 @@
           <ul>
             <li>
               <i class="fas fa-map-marker-alt"></i>
-              <span>Dirección</span> 
+              <span>Dirección</span>
             </li>
             <li>
               <i class="fas fa-phone-alt"></i>
-              <span>Teléfono</span> 
+              <span>Teléfono</span>
             </li>
             <li>
               <i class="fas fa-envelope"></i>
-              <span>Correo</span> 
+              <span>Correo</span>
             </li>
           </ul>
         </div>
@@ -159,16 +166,16 @@
               <textarea placeholder="Mensaje"></textarea>
 
               <div>
-                <input type="reset" value="Reset">
-                <input type="submit">
+                <input type="reset" value="Reset" />
+                <input type="submit" />
               </div>
-              
             </form>
           </div>
         </div>
       </div>
       <div class="footer-down">
-        <p>Todos los derechos reservados a Kevin Sangregorio</p><span>&copy;</span>
+        <p>Todos los derechos reservados a Kevin Sangregorio</p>
+        <span>&copy;</span>
       </div>
     </footer>
   </body>

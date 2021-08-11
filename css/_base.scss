@@ -23,4 +23,10 @@ a {
     text-decoration: none;
 }
 
+button, input[type=submit], input[type=reset] {
+    &:hover {
+        cursor: pointer;
+    }
+}
+
 
