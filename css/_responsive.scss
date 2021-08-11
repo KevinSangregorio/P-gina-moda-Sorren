@@ -9,9 +9,10 @@
       div.container-btn-menu {
         input#btn-menu {
           &:checked {
-            & ~ nav#home-menu {
-              margin: 0;
-              
+            & nav#home-menu {
+              ul {
+                display: block;
+              }
             }
           }
         }
@@ -25,9 +26,9 @@
       background: #fff;
       top: 112px;
       right: 0px;
-
       ul {
         flex-direction: column;
+        display: none;
       }
     }
   }
@@ -98,10 +99,11 @@
         p {
           text-align: left;
           font-size: 2rem;
-          margin-top: 40px;
-          width: 80%;
+          margin: 30px 35px 0;
+          width: 100%;
         }
         ul {
+          margin: 0 35px;
           font-size: 1.5rem;
           li {
             text-align: center;
@@ -116,6 +118,17 @@
         }
         div.form-container {
           width: 100%;
+          form {
+            h3 {
+              font-size: 1.5rem;
+            }
+            input,textarea, div input {
+              font-size: 1.2rem;
+              &::placeholder {
+                font-size: 1.2rem;
+              }
+            }
+          }
         }
       }
     }

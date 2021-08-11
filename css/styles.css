@@ -702,8 +702,8 @@ body.dark footer div.footer-down span {
     font-size: 2rem;
     margin-right: 10px;
   }
-  header div.items-header div.container-btn-menu input#btn-menu:checked ~ nav#home-menu {
-    margin: 0;
+  header div.items-header div.container-btn-menu input#btn-menu:checked nav#home-menu ul {
+    display: block;
   }
   header div.items-header div.container-btn-menu label {
     display: block;
@@ -719,6 +719,7 @@ body.dark footer div.footer-down span {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    display: none;
   }
   main {
     display: -webkit-box;
@@ -804,10 +805,11 @@ body.dark footer div.footer-down span {
   footer div.footer-up div.footer-up__info-contact p {
     text-align: left;
     font-size: 2rem;
-    margin-top: 40px;
-    width: 80%;
+    margin: 30px 35px 0;
+    width: 100%;
   }
   footer div.footer-up div.footer-up__info-contact ul {
+    margin: 0 35px;
     font-size: 1.5rem;
   }
   footer div.footer-up div.footer-up__info-contact ul li {
@@ -822,6 +824,24 @@ body.dark footer div.footer-down span {
   }
   footer div.footer-up div.footer-up__form div.form-container {
     width: 100%;
+  }
+  footer div.footer-up div.footer-up__form div.form-container form h3 {
+    font-size: 1.5rem;
+  }
+  footer div.footer-up div.footer-up__form div.form-container form input, footer div.footer-up div.footer-up__form div.form-container form textarea, footer div.footer-up div.footer-up__form div.form-container form div input {
+    font-size: 1.2rem;
+  }
+  footer div.footer-up div.footer-up__form div.form-container form input::-webkit-input-placeholder, footer div.footer-up div.footer-up__form div.form-container form textarea::-webkit-input-placeholder, footer div.footer-up div.footer-up__form div.form-container form div input::-webkit-input-placeholder {
+    font-size: 1.2rem;
+  }
+  footer div.footer-up div.footer-up__form div.form-container form input:-ms-input-placeholder, footer div.footer-up div.footer-up__form div.form-container form textarea:-ms-input-placeholder, footer div.footer-up div.footer-up__form div.form-container form div input:-ms-input-placeholder {
+    font-size: 1.2rem;
+  }
+  footer div.footer-up div.footer-up__form div.form-container form input::-ms-input-placeholder, footer div.footer-up div.footer-up__form div.form-container form textarea::-ms-input-placeholder, footer div.footer-up div.footer-up__form div.form-container form div input::-ms-input-placeholder {
+    font-size: 1.2rem;
+  }
+  footer div.footer-up div.footer-up__form div.form-container form input::placeholder, footer div.footer-up div.footer-up__form div.form-container form textarea::placeholder, footer div.footer-up div.footer-up__form div.form-container form div input::placeholder {
+    font-size: 1.2rem;
   }
 }
 /*# sourceMappingURL=styles.css.map */
