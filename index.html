@@ -6,11 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sorren</title>
     <script src="./js/main.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-    />
+    <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
     <link rel="stylesheet" href="./css/styles.css" />
+    
   </head>
   <body>
     <header>
@@ -39,7 +38,7 @@
     </header>
 
     <main>
-      <section class="wn-season wn-s1">
+      <section class="wn-season wn-s1" data-aos="zoom-in">
         <div>
           <p class="big-disc">Grandes Descuentos</p>
           <h2>En temporada de invierno</h2>
@@ -48,7 +47,7 @@
         </div>
       </section>
 
-      <section class="tendencias">
+      <section class="tendencias" data-aos="fade-left">
         <div class="trending trend1">
           <div>
             <p>Mujer</p>
@@ -91,7 +90,7 @@
             <li><a href="#">Liquidación</a></li>
           </ul>
         </div>
-        <div class="container-featured-products">
+        <div class="container-featured-products" data-aos="fade-up">
           <div class="featured-item">
             <div>
               <p>Sin stock</p>
@@ -123,7 +122,7 @@
         </div>
       </section>
 
-      <section class="wn-season wn-s2">
+      <section class="wn-season wn-s2" data-aos="zoom-in">
         <div>
           <p class="big-disc">Grandes Descuentos</p>
           <h2>En temporada de invierno</h2>
@@ -133,7 +132,7 @@
       </section>
     </main>
 
-    <footer>
+    <footer data-aos="fade-up">
       <div class="footer-up">
         <div class="footer-up__info-contact">
           <p>Información de la tienda</p>
@@ -178,5 +177,8 @@
         <span>&copy;</span>
       </div>
     </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init()</script>
   </body>
 </html>
