@@ -9,10 +9,8 @@
       div.container-btn-menu {
         input#btn-menu {
           &:checked {
-            & nav#home-menu {
-              ul {
-                display: block;
-              }
+            & ~ nav#home-menu {
+               margin: 0;
             }
           }
         }
@@ -26,9 +24,9 @@
       background: #fff;
       top: 112px;
       right: 0px;
+      margin-right: -80%; 
       ul {
-        flex-direction: column;
-        display: none;
+        flex-direction: column; 
       }
     }
   }
@@ -38,7 +36,6 @@
     justify-content: center;
     vertical-align: center;
     section.wn-s1 {
-      background-image: url(../assets/mobile-background-light-blue.png);
       display: flex;
       justify-content: center;
       div {

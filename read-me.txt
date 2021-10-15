@@ -1,6 +1,2 @@
--Agregar Skeleton o animacion mientras carga
--Crear página de login
-
-Arreglar:
-	- "Gracias por confiar en nosotrxs" --> el padding sobre sale cuando se baja la resolucion de pantalla
-	- Boton de compra de "remeras lindas"
+#Sorren.
+##Página estática hecha con HTML y SASS.

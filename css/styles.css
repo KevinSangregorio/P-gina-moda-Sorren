@@ -702,8 +702,8 @@ body.dark footer div.footer-down span {
     font-size: 2rem;
     margin-right: 10px;
   }
-  header div.items-header div.container-btn-menu input#btn-menu:checked nav#home-menu ul {
-    display: block;
+  header div.items-header div.container-btn-menu input#btn-menu:checked ~ nav#home-menu {
+    margin: 0;
   }
   header div.items-header div.container-btn-menu label {
     display: block;
@@ -713,13 +713,13 @@ body.dark footer div.footer-down span {
     background: #fff;
     top: 112px;
     right: 0px;
+    margin-right: -80%;
   }
   header nav#home-menu ul {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    display: none;
   }
   main {
     display: -webkit-box;
@@ -735,7 +735,6 @@ body.dark footer div.footer-down span {
     vertical-align: center;
   }
   main section.wn-s1 {
-    background-image: url(../assets/mobile-background-light-blue.png);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
